@@ -8,6 +8,18 @@ const routes = [
     name: 'Home',
     component: Home,
   },
+
+  {
+    path: '/dashboard',
+    component: () => import(/* webpackChunkName="dashboard" */ './modules/dashboard/DashboardModule.vue'),
+    children: [
+      {
+        path: '',
+        name: 'Dashboard',
+        component: () => import(/* webpackChunkName="dashboard" */ './modules/dashboard/views/Index.vue'),
+      },
+    ],
+  },
 ]
 
 const router = createRouter({

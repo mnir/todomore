@@ -8,6 +8,7 @@ export interface UserState {
   name: string
   email: string
   image: string
+  activeVault: string | null
 }
 
 export interface VaultState {
