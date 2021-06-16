@@ -10,7 +10,7 @@ const routes = [
   },
 
   {
-    path: '/dashboard',
+    path: '/dashboard/:userId/:vaultId',
     component: () => import(/* webpackChunkName="dashboard" */ './modules/dashboard/DashboardModule.vue'),
     children: [
       {

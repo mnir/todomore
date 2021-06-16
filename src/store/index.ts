@@ -6,6 +6,12 @@ const store: StoreOptions<RootState> = {
   state: {
     toastGeneral: false,
     isAppReady: false,
+    activeVault: null,
+  },
+  mutations: {
+    SET_ACTIVE_VAULT(state: any, payload: any) {
+      state.activeVault = payload
+    },
   },
   modules: {
     user,

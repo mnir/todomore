@@ -21,7 +21,7 @@ export const actions: ActionTree<UserState, RootState> = {
    * @param param0
    * @param payload
    */
-  async checkUserInDatabase({ dispatch }: any, user: any) {
+  async checkUserInDatabase({ commit, dispatch }: any, user: any) {
     const userRef = doc(db, 'users', user.uid)
 
     await getDoc(userRef)
@@ -35,6 +35,7 @@ export const actions: ActionTree<UserState, RootState> = {
             image: res.data().image,
             activeVault: res.data().activeVault,
           }
+          commit('SET_USER', userdata)
           dispatch('checkUserVault', userdata)
         } else {
           console.log('gak ada')
@@ -71,7 +72,7 @@ export const actions: ActionTree<UserState, RootState> = {
     } else {
       // redirect ke dashboard
       console.log('here')
-      router.push({ name: 'Dashboard' })
+      router.push({ name: 'Dashboard', params: { userId: user.id, vaultId: user.activeVault } })
     }
   },
 }

@@ -1,6 +1,7 @@
 export interface RootState {
   isAppReady: boolean
   toastGeneral: boolean
+  activeVault: string | null
 }
 
 export interface UserState {

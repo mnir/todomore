@@ -1,6 +1,7 @@
 import { Module } from 'vuex'
 import { RootState, UserState } from '../../../store/types'
 import { actions } from './actions'
+import { mutations } from './mutations'
 
 const state: UserState = {
   id: '',
@@ -10,4 +11,4 @@ const state: UserState = {
   activeVault: null,
 }
 
-export const user: Module<UserState, RootState> = { namespaced: true, state, actions }
+export const user: Module<UserState, RootState> = { namespaced: true, state, actions, mutations }
