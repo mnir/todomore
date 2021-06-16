@@ -5,7 +5,7 @@ html {
 }
 
 html.dark {
-  @apply bg-gray-900 text-gray-500;
+  @apply bg-gray-900 text-gray-300;
 }
 
 @tailwind components;

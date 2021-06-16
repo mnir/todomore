@@ -15,6 +15,7 @@ export default defineComponent({
 
 
 <template>
-  <div>Hi</div>
-  <div v-if="user">{{ user }}</div>
+  <div class="container mx-auto">
+    <div>Dashboard</div>
+  </div>
 </template>

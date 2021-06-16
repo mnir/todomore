@@ -19,7 +19,6 @@ export default defineComponent({
 </script>
 
 <template>
-  <navigation :user="user"></navigation>
   <div class="pl-64">
     <router-view v-if="isModuleReady"></router-view>
   </div>

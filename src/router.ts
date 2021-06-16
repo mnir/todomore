@@ -20,6 +20,17 @@ const routes = [
       },
     ],
   },
+  {
+    path: '/todo/:userId/:vaultId',
+    component: () => import(/* webpackChunkName="dashboard" */ './modules/todo/TodoModule.vue'),
+    children: [
+      {
+        path: '',
+        name: 'Todo',
+        component: () => import(/* webpackChunkName="dashboard" */ './modules/todo/views/Index.vue'),
+      },
+    ],
+  },
 ]
 
 const router = createRouter({
