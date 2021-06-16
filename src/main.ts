@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 import './services/firebase'
 import './authentication'
+import './index.css'
 
 const app = createApp(App)
 

@@ -1,10 +1,20 @@
-import { collection, doc, getDoc, query, where } from 'firebase/firestore'
+import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
+import { doc, getDoc } from 'firebase/firestore'
 import { ActionTree } from 'vuex'
 import router from '../../../router'
 import { db } from '../../../services/firebase'
 import { RootState, UserState } from '../../../store/types'
 
 export const actions: ActionTree<UserState, RootState> = {
+  /**
+   * Authenticate user
+   *
+   */
+  signIn() {
+    const provider = new GoogleAuthProvider()
+    signInWithPopup(getAuth(), provider)
+  },
+
   /**
    * Cek apakah user sudah ada didalam database
    *
