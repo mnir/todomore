@@ -27,7 +27,6 @@ export const actions: ActionTree<UserState, RootState> = {
     await getDoc(userRef)
       .then((res) => {
         if (res.exists()) {
-          console.log(res.data())
           const userdata: UserState = {
             id: res.id,
             name: res.data().name,
@@ -50,7 +49,7 @@ export const actions: ActionTree<UserState, RootState> = {
 
   /**
    * User baru
-   *
+   * TODO: Selesein fungsi ini
    * @param _
    * @param payload
    */
@@ -64,8 +63,7 @@ export const actions: ActionTree<UserState, RootState> = {
    * @param _
    * @param user
    */
-  checkUserVault(_: any, user: any) {
-    console.log(user)
+  checkUserVault(_: any, user: UserState) {
     if (user.activeVault == null) {
       // create new vault
     } else {

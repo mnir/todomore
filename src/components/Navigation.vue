@@ -1,7 +1,7 @@
 <script lang="ts">
 import { computed, defineComponent, PropType } from "vue";
 import { mapState } from "vuex";
-import { UserState } from "../store/interface";
+import { ProjectState, UserState } from "../store/interface";
 import NavigationProjectList from "./NavigationProjectList.vue";
 
 export default defineComponent({
@@ -15,6 +15,11 @@ export default defineComponent({
   setup() {},
   computed: {
     ...mapState("project", ["projects"]),
+    activeProjects(): ProjectState[] {
+      return this.projects.filter((item: ProjectState) => {
+        return item.taskCount;
+      });
+    },
   },
 });
 </script>
@@ -33,8 +38,8 @@ export default defineComponent({
           },
         }"
       >
-        Dashboard</router-link
-      >
+        Dashboard
+      </router-link>
       <router-link
         class="block py-2 w-full px-2 dark:hover:bg-gray-800 rounded"
         :to="{
@@ -49,9 +54,9 @@ export default defineComponent({
       <div class="mt-8 px-2 text-xs text-gray-600 uppercase tracking-wider">
         Proyek
       </div>
-      <div>
+      <div v-if="projects">
         <navigation-project-list
-          v-for="project in projects"
+          v-for="project in activeProjects"
           :key="project.id"
           :project="project"
         />

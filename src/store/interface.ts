@@ -46,6 +46,6 @@ export interface TrackState {
   duration: number
   end: Date | null
   start: Date | null
-  todo: TodoState
-  project: ProjectState
+  todo: Partial<TodoState>
+  project: Partial<ProjectState>
 }

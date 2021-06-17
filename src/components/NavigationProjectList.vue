@@ -18,8 +18,8 @@ export default defineComponent({
     :to="{
       name: 'Project',
       params: {
-        userId: this.$route.params.userId,
-        vaultId: this.$route.params.vaultId,
+        userId: $route.params.userId,
+        vaultId: $route.params.vaultId,
         projectId: project.id,
       },
     }"
