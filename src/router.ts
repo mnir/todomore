@@ -31,6 +31,17 @@ const routes = [
       },
     ],
   },
+  {
+    path: '/project/:userId/:vaultId/:projectId',
+    component: () => import(/* webpackChunkName="dashboard" */ './modules/project/ProjectModule.vue'),
+    children: [
+      {
+        path: '',
+        name: 'Project',
+        component: () => import(/* webpackChunkName="dashboard" */ './modules/project/views/Index.vue'),
+      },
+    ],
+  },
 ]
 
 const router = createRouter({

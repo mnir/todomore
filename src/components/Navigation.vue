@@ -1,8 +1,11 @@
 <script lang="ts">
-import { defineComponent, PropType } from "vue";
+import { computed, defineComponent, PropType } from "vue";
+import { mapState } from "vuex";
 import { UserState } from "../store/interface";
+import NavigationProjectList from "./NavigationProjectList.vue";
 
 export default defineComponent({
+  components: { NavigationProjectList },
   props: {
     user: {
       required: true,
@@ -10,6 +13,9 @@ export default defineComponent({
     },
   },
   setup() {},
+  computed: {
+    ...mapState("project", ["projects"]),
+  },
 });
 </script>
 
@@ -42,6 +48,13 @@ export default defineComponent({
       >
       <div class="mt-8 px-2 text-xs text-gray-600 uppercase tracking-wider">
         Proyek
+      </div>
+      <div>
+        <navigation-project-list
+          v-for="project in projects"
+          :key="project.id"
+          :project="project"
+        />
       </div>
     </div>
   </div>
