@@ -17,5 +17,6 @@ export default defineComponent({
 <template>
   <div class="container mx-auto">
     <div>Dashboard</div>
+    <div></div>
   </div>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <navigation v-if="user" :user="user" />
+  <navigation v-if="user.activeVault" :user="user" />
   <router-view></router-view>
 </template>
 
@@ -16,5 +16,3 @@ export default defineComponent({
   },
 });
 </script>
-
-    Navigation

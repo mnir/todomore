@@ -5,15 +5,23 @@ import { useStore } from "vuex";
 
 export default defineComponent({
   components: { Navigation },
-  setup() {
-    const store = useStore();
-    const isModuleReady = ref(true);
-    const user = store.state.user;
 
+  data() {
     return {
-      user,
-      isModuleReady,
+      isModuleReady: false,
     };
+  },
+
+  created() {
+    this.fetchProjects();
+  },
+
+  methods: {
+    async fetchProjects() {
+      const store = useStore();
+      await store.dispatch("project/fetchProjects", this.$route.params.vaultId);
+      this.isModuleReady = true;
+    },
   },
 });
 </script>

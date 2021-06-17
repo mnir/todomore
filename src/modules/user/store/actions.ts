@@ -3,7 +3,7 @@ import { doc, getDoc } from 'firebase/firestore'
 import { ActionTree } from 'vuex'
 import router from '../../../router'
 import { db } from '../../../services/firebase'
-import { RootState, UserState } from '../../../store/types'
+import { RootState, UserState } from '../../../store/interface'
 
 export const actions: ActionTree<UserState, RootState> = {
   /**
@@ -68,11 +68,15 @@ export const actions: ActionTree<UserState, RootState> = {
     console.log(user)
     if (user.activeVault == null) {
       // create new vault
-      console.log('heresd')
     } else {
       // redirect ke dashboard
-      console.log('here')
-      router.push({ name: 'Dashboard', params: { userId: user.id, vaultId: user.activeVault } })
+      router.push({
+        name: 'Dashboard',
+        params: {
+          userId: user.id,
+          vaultId: user.activeVault,
+        },
+      })
     }
   },
 }

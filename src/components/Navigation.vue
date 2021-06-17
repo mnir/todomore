@@ -1,6 +1,6 @@
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
-import { UserState } from "../store/types";
+import { UserState } from "../store/interface";
 
 export default defineComponent({
   props: {
@@ -16,9 +16,9 @@ export default defineComponent({
 
 <template>
   <div class="fixed top-0 left-0 w-64 h-screen bg-white dark:bg-gray-900">
-    <div class="p-6">
+    <div class="p-2">
       <router-link
-        class="block w-full py-2"
+        class="block w-full py-2 px-2 dark:hover:bg-gray-800 rounded"
         :to="{
           name: 'Dashboard',
           params: {
@@ -30,7 +30,7 @@ export default defineComponent({
         Dashboard</router-link
       >
       <router-link
-        class="block py-2 w-full"
+        class="block py-2 w-full px-2 dark:hover:bg-gray-800 rounded"
         :to="{
           name: 'Todo',
           params: {
@@ -40,12 +40,12 @@ export default defineComponent({
         }"
         >Tugas</router-link
       >
-      <div class="mt-8 text-xs text-gray-600 uppercase tracking-wider">
+      <div class="mt-8 px-2 text-xs text-gray-600 uppercase tracking-wider">
         Proyek
       </div>
     </div>
   </div>
-  <div class="fixed top-0 right-0 h-10 p-6">
+  <div class="fixed top-0 right-0 h-10 p-4">
     <button>
       <img :src="user.image" class="w-8 rounded-full" :alt="user.name" />
     </button>
