@@ -1,9 +1,9 @@
-import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
-import { doc, getDoc } from 'firebase/firestore'
-import { ActionTree } from 'vuex'
-import router from '../../../router'
-import { db } from '../../../services/firebase'
-import { RootState, UserState } from '../../../store/interface'
+import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { addDoc, collection, doc, getDoc, runTransaction, setDoc } from 'firebase/firestore';
+import { ActionTree } from 'vuex';
+import router from '../../../router';
+import { db } from '../../../services/firebase';
+import { RootState, UserState } from '../../../store/interface';
 
 export const actions: ActionTree<UserState, RootState> = {
   /**
@@ -11,8 +11,8 @@ export const actions: ActionTree<UserState, RootState> = {
    *
    */
   signIn() {
-    const provider = new GoogleAuthProvider()
-    signInWithPopup(getAuth(), provider)
+    const provider = new GoogleAuthProvider();
+    signInWithPopup(getAuth(), provider);
   },
 
   /**
@@ -22,7 +22,7 @@ export const actions: ActionTree<UserState, RootState> = {
    * @param payload
    */
   async checkUserInDatabase({ commit, dispatch }: any, user: any) {
-    const userRef = doc(db, 'users', user.uid)
+    const userRef = doc(db, 'users', user.uid);
 
     await getDoc(userRef)
       .then((res) => {
@@ -33,18 +33,19 @@ export const actions: ActionTree<UserState, RootState> = {
             email: res.data().email,
             image: res.data().image,
             activeVault: res.data().activeVault,
-          }
-          commit('SET_USER', userdata)
-          dispatch('checkUserVault', userdata)
+          };
+          commit('SET_USER', userdata);
+          console.log('ada');
+          dispatch('checkUserVault', userdata);
         } else {
-          console.log('gak ada')
+          console.log('gak ada');
           // TODO: Simpan data user kedalam database
-          // dispatch(createUser, payload.user)
+          dispatch('createUser', user);
         }
       })
       .catch((err) => {
-        console.log(err)
-      })
+        console.log(err);
+      });
   },
 
   /**
@@ -53,8 +54,21 @@ export const actions: ActionTree<UserState, RootState> = {
    * @param _
    * @param payload
    */
-  createUser(_: any, payload: any) {
-    console.log(payload)
+  createUser({ dispatch }: any, payload: any) {
+    const userRef = doc(db, 'users', payload.uid);
+
+    const userdata: UserState = {
+      id: payload.uid,
+      name: payload.displayName,
+      email: payload.email,
+      image: payload.photoURL,
+      activeVault: null,
+    };
+    try {
+      setDoc(userRef, userdata).then(dispatch('checkUserVault', userdata));
+    } catch (err) {
+      throw err;
+    }
   },
 
   /**
@@ -64,8 +78,32 @@ export const actions: ActionTree<UserState, RootState> = {
    * @param user
    */
   checkUserVault(_: any, user: UserState) {
+    const userRef = doc(db, 'users', user.id);
     if (user.activeVault == null) {
       // create new vault
+      const vaultRef = collection(db, 'vaults');
+      addDoc(vaultRef, {
+        owner: {
+          id: user.id,
+          name: user.name,
+        },
+      }).then((res) => {
+        runTransaction(db, async (t) => {
+          const userDoc = await t.get(userRef);
+          if (userDoc.exists()) {
+            t.update(userRef, {
+              activeVault: res.id,
+            });
+          }
+        });
+        router.push({
+          name: 'Dashboard',
+          params: {
+            userId: user.id,
+            vaultId: res.id,
+          },
+        });
+      });
     } else {
       // redirect ke dashboard
       router.push({
@@ -74,7 +112,7 @@ export const actions: ActionTree<UserState, RootState> = {
           userId: user.id,
           vaultId: user.activeVault,
         },
-      })
+      });
     }
   },
-}
+};

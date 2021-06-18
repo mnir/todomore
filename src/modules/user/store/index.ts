@@ -1,7 +1,7 @@
-import { Module } from 'vuex'
-import { RootState, UserState } from '../../../store/interface'
-import { actions } from './actions'
-import { mutations } from './mutations'
+import { Module } from 'vuex';
+import { RootState, UserState } from '../../../store/interface';
+import { actions } from './actions';
+import { mutations } from './mutations';
 
 const state: UserState = {
   id: '',
@@ -9,6 +9,6 @@ const state: UserState = {
   email: '',
   image: '',
   activeVault: null,
-}
+};
 
-export const user: Module<UserState, RootState> = { namespaced: true, state, actions, mutations }
+export const user: Module<UserState, RootState> = { namespaced: true, state, actions, mutations };

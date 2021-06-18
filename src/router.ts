@@ -1,6 +1,6 @@
-import { createWebHistory, createRouter } from 'vue-router'
+import { createWebHistory, createRouter } from 'vue-router';
 
-import Home from './components/Home.vue'
+import Home from './components/Home.vue';
 
 const routes = [
   {
@@ -8,7 +8,6 @@ const routes = [
     name: 'Home',
     component: Home,
   },
-
   {
     path: '/dashboard/:userId/:vaultId',
     component: () => import(/* webpackChunkName="dashboard" */ './modules/dashboard/DashboardModule.vue'),
@@ -42,11 +41,11 @@ const routes = [
       },
     ],
   },
-]
+];
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
-})
+});
 
-export default router
+export default router;
