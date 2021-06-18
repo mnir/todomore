@@ -13,6 +13,9 @@ const store: StoreOptions<RootState> = {
     SET_ACTIVE_VAULT(state: any, payload: any) {
       state.activeVault = payload
     },
+    SET_APP_STATUS(state: any, status: boolean) {
+      state.isAppReady = status
+    },
   },
   modules: {
     user,

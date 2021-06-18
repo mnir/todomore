@@ -1,9 +1,10 @@
-import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
-import { addDoc, collection, doc, getDoc, runTransaction, setDoc } from 'firebase/firestore';
-import { ActionTree } from 'vuex';
-import router from '../../../router';
-import { db } from '../../../services/firebase';
-import { RootState, UserState } from '../../../store/interface';
+import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
+import { addDoc, collection, doc, getDoc, runTransaction, setDoc } from 'firebase/firestore'
+import { ActionTree } from 'vuex'
+import router from '../../../router'
+import { db } from '../../../services/firebase'
+import store from '../../../store'
+import { RootState, UserState } from '../../../store/interface'
 
 export const actions: ActionTree<UserState, RootState> = {
   /**
@@ -11,18 +12,16 @@ export const actions: ActionTree<UserState, RootState> = {
    *
    */
   signIn() {
-    const provider = new GoogleAuthProvider();
-    signInWithPopup(getAuth(), provider);
+    const provider = new GoogleAuthProvider()
+    signInWithPopup(getAuth(), provider)
   },
 
   /**
-   * Cek apakah user sudah ada didalam database
-   *
    * @param param0
    * @param payload
    */
   async checkUserInDatabase({ commit, dispatch }: any, user: any) {
-    const userRef = doc(db, 'users', user.uid);
+    const userRef = doc(db, 'users', user.uid)
 
     await getDoc(userRef)
       .then((res) => {
@@ -33,29 +32,29 @@ export const actions: ActionTree<UserState, RootState> = {
             email: res.data().email,
             image: res.data().image,
             activeVault: res.data().activeVault,
-          };
-          commit('SET_USER', userdata);
-          console.log('ada');
-          dispatch('checkUserVault', userdata);
+          }
+          commit('SET_USER', userdata)
+          console.log('ada')
+          dispatch('checkUserVault', userdata)
         } else {
-          console.log('gak ada');
+          console.log('gak ada')
           // TODO: Simpan data user kedalam database
-          dispatch('createUser', user);
+          dispatch('createUser', user)
         }
       })
       .catch((err) => {
-        console.log(err);
-      });
+        console.log(err)
+      })
   },
 
   /**
-   * User baru
-   * TODO: Selesein fungsi ini
+   * * User baru
+   *
    * @param _
    * @param payload
    */
   createUser({ dispatch }: any, payload: any) {
-    const userRef = doc(db, 'users', payload.uid);
+    const userRef = doc(db, 'users', payload.uid)
 
     const userdata: UserState = {
       id: payload.uid,
@@ -63,25 +62,25 @@ export const actions: ActionTree<UserState, RootState> = {
       email: payload.email,
       image: payload.photoURL,
       activeVault: null,
-    };
+    }
     try {
-      setDoc(userRef, userdata).then(dispatch('checkUserVault', userdata));
+      setDoc(userRef, userdata).then(dispatch('checkUserVault', userdata))
     } catch (err) {
-      throw err;
+      throw err
     }
   },
 
   /**
-   * Cek apakah user sudah memiliki vault
+   * * Cek apakah user sudah memiliki vault
    *
    * @param _
    * @param user
    */
   checkUserVault(_: any, user: UserState) {
-    const userRef = doc(db, 'users', user.id);
+    const userRef = doc(db, 'users', user.id)
     if (user.activeVault == null) {
       // create new vault
-      const vaultRef = collection(db, 'vaults');
+      const vaultRef = collection(db, 'vaults')
       addDoc(vaultRef, {
         owner: {
           id: user.id,
@@ -89,21 +88,22 @@ export const actions: ActionTree<UserState, RootState> = {
         },
       }).then((res) => {
         runTransaction(db, async (t) => {
-          const userDoc = await t.get(userRef);
+          const userDoc = await t.get(userRef)
           if (userDoc.exists()) {
             t.update(userRef, {
               activeVault: res.id,
-            });
+            })
           }
-        });
+        })
         router.push({
           name: 'Dashboard',
           params: {
             userId: user.id,
             vaultId: res.id,
           },
-        });
-      });
+        })
+        store.commit('SET_APP_STATUS', true)
+      })
     } else {
       // redirect ke dashboard
       router.push({
@@ -112,7 +112,8 @@ export const actions: ActionTree<UserState, RootState> = {
           userId: user.id,
           vaultId: user.activeVault,
         },
-      });
+      })
+      store.commit('SET_APP_STATUS', true)
     }
   },
-};
+}

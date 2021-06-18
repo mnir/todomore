@@ -6,6 +6,7 @@ onAuthStateChanged(getAuth(), (user) => {
   if (!user) {
     router.push({ name: 'Home' })
   } else {
+    store.commit('SET_APP_STATUS', false)
     store.dispatch('user/checkUserInDatabase', user)
   }
 })
