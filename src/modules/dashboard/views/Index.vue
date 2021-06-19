@@ -19,7 +19,7 @@ export default defineComponent({
   },
 
   computed: {
-    ...mapState(["user"]),
+    ...mapState(["user", "vault"]),
   },
 });
 </script>
@@ -27,7 +27,7 @@ export default defineComponent({
 
 <template>
   <div class="w-2/3 mx-auto pt-12">
-    <div>Dashboard</div>
+    <div>Dashboard : {{ vault }} - {{ user }}</div>
     <div>
       <input
         type="text"

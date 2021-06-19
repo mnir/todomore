@@ -1429,3 +1429,525 @@ Jun 19, 2021 9:56:32 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channe
 INFO: Detected non-HTTP/2 connection.
 Jun 19, 2021 9:56:32 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
 INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 9:57:03 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 9:57:17 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 9:58:02 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 9:58:03 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 9:58:49 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 9:59:03 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 9:59:03 AM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt
+WARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE
+Jun 19, 2021 9:59:03 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 9:59:03 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 9:59:09 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 9:59:09 AM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt
+WARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE
+Jun 19, 2021 9:59:09 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 9:59:09 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 9:59:23 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 9:59:23 AM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt
+WARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE
+Jun 19, 2021 9:59:23 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 9:59:23 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 9:59:30 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 9:59:30 AM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt
+WARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE
+Jun 19, 2021 9:59:30 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 9:59:30 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 9:59:49 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 9:59:53 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 9:59:53 AM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt
+WARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE
+Jun 19, 2021 9:59:53 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 9:59:53 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:00:40 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:00:40 AM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt
+WARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE
+Jun 19, 2021 10:00:40 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:00:40 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:00:48 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:00:48 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:00:54 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:00:54 AM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt
+WARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE
+Jun 19, 2021 10:00:54 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:00:54 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:00:54 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:00:54 AM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt
+WARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE
+Jun 19, 2021 10:00:54 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:00:54 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:00:54 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:00:54 AM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt
+WARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE
+Jun 19, 2021 10:00:54 AM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt
+WARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE
+Jun 19, 2021 10:00:57 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:01:54 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:01:54 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:01:54 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:01:54 AM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreWriteHandler onClose
+INFO: channel closed
+Jun 19, 2021 10:01:57 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:02:15 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:02:45 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:03:13 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:03:21 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:03:21 AM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt
+WARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE
+Jun 19, 2021 10:03:21 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:03:21 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:03:37 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:03:37 AM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt
+WARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE
+Jun 19, 2021 10:03:37 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:03:37 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:04:13 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:04:37 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:05:13 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:06:12 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:06:12 AM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt
+WARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE
+Jun 19, 2021 10:06:12 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:06:13 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:06:22 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:06:22 AM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt
+WARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE
+Jun 19, 2021 10:06:22 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:06:22 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:06:29 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:07:01 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:07:01 AM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt
+WARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE
+Jun 19, 2021 10:07:01 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:07:01 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:07:15 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:07:41 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:07:41 AM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt
+WARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE
+Jun 19, 2021 10:07:41 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:07:41 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:08:15 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:08:26 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:08:26 AM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt
+WARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE
+Jun 19, 2021 10:08:26 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:08:26 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:09:15 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:09:26 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:10:15 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:10:41 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:11:01 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:11:41 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:12:17 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:12:56 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:13:33 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:13:41 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:14:19 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:14:56 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:15:35 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:15:41 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:16:35 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:16:41 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:17:51 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:17:56 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:18:41 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:18:51 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:19:37 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:19:56 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:20:23 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:20:56 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:21:39 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:21:56 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:22:55 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:22:56 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:24:11 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:24:11 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:24:57 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:25:26 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:25:49 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:25:49 AM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt
+WARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE
+Jun 19, 2021 10:25:49 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:25:49 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:25:51 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:25:51 AM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt
+WARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE
+Jun 19, 2021 10:25:51 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:25:51 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:25:57 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:26:36 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:26:57 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:27:36 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:27:51 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:27:51 AM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt
+WARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE
+Jun 19, 2021 10:27:51 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:27:51 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:27:57 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:28:00 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:28:00 AM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt
+WARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE
+Jun 19, 2021 10:28:00 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:28:00 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:28:55 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:28:55 AM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt
+WARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE
+Jun 19, 2021 10:28:55 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:28:55 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:28:57 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:29:40 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:29:43 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:30:40 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:30:59 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:31:40 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:31:44 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:31:44 AM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt
+WARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE
+Jun 19, 2021 10:31:44 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:31:44 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:32:15 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:32:45 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:32:45 AM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt
+WARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE
+Jun 19, 2021 10:32:45 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:32:45 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:32:45 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:32:45 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:33:20 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:33:20 AM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt
+WARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE
+Jun 19, 2021 10:33:20 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:33:21 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:33:21 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:33:21 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:33:31 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:33:53 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:33:53 AM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt
+WARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE
+Jun 19, 2021 10:33:53 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:33:53 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:33:53 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:33:53 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:34:31 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:34:39 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:34:39 AM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt
+WARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE
+Jun 19, 2021 10:34:39 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:34:39 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:34:39 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:34:39 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:35:11 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:35:11 AM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt
+WARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE
+Jun 19, 2021 10:35:11 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:35:11 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:35:11 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:35:11 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:35:21 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:35:21 AM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt
+WARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE
+Jun 19, 2021 10:35:21 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:35:21 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:35:21 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:35:21 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:35:47 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:36:19 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:36:19 AM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt
+WARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE
+Jun 19, 2021 10:36:19 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:36:19 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:36:19 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:36:19 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:36:47 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:37:19 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:37:24 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:37:24 AM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt
+WARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE
+Jun 19, 2021 10:37:24 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:37:24 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:37:26 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:37:26 AM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt
+WARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE
+Jun 19, 2021 10:37:26 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:37:26 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:37:26 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:37:26 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:37:44 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:37:44 AM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt
+WARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE
+Jun 19, 2021 10:37:44 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:37:44 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:37:44 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:37:44 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:38:01 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:38:01 AM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt
+WARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE
+Jun 19, 2021 10:38:01 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:38:01 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:38:01 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:38:01 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:38:03 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:38:12 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:38:12 AM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt
+WARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE
+Jun 19, 2021 10:38:12 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:38:12 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:38:12 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:38:12 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:38:49 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:38:57 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:39:49 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:39:57 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:40:22 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:40:22 AM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt
+WARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE
+Jun 19, 2021 10:40:22 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:40:22 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:40:22 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:40:22 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:40:38 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:40:38 AM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt
+WARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE
+Jun 19, 2021 10:40:38 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:40:39 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:40:39 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:40:39 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:40:49 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:40:52 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:40:52 AM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt
+WARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE
+Jun 19, 2021 10:40:52 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:40:52 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:40:52 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:40:52 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:41:49 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:42:40 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:42:40 AM com.google.cloud.datastore.emulator.impl.context.EmulatorAuthorization warnAboutSecuredJwt
+WARNING: expected an unsecured JWT, the emulator does not validate JWTs and IS NOT SECURE
+Jun 19, 2021 10:42:40 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:42:40 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:42:40 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:42:40 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jun 19, 2021 10:42:49 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.

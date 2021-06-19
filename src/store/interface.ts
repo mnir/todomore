@@ -12,16 +12,6 @@ export interface UserState {
   activeVault: string | null
 }
 
-export interface VaultState {
-  id: string
-  name: string
-  totalProject: number
-  totalTask: number
-  totalUser: number
-  users: Array<UserState>
-  owner: UserState
-}
-
 export interface ProjectState {
   id: string
   name: string
