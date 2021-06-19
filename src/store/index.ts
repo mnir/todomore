@@ -3,6 +3,7 @@ import { RootState } from './interface'
 import { user } from '../modules/user/store'
 import { project } from '../modules/project/store'
 import { vault } from '../modules/vault/store'
+import { todo } from '../modules/todo/store'
 
 const store: StoreOptions<RootState> = {
   state: {
@@ -22,6 +23,7 @@ const store: StoreOptions<RootState> = {
     user,
     project,
     vault,
+    todo,
   },
 }
 

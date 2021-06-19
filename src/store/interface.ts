@@ -1,3 +1,6 @@
+import { ProjectState } from '../modules/project/store/interface'
+import { TodoState } from '../modules/todo/store/interface'
+
 export interface RootState {
   isAppReady: boolean
   toastGeneral: boolean
@@ -10,25 +13,6 @@ export interface UserState {
   email: string
   image: string
   activeVault: string | null
-}
-
-export interface ProjectState {
-  id: string
-  name: string
-  taskCount: number
-}
-
-export interface TodoState {
-  id: string
-  assignUser: Partial<UserState>
-  completedDate: Date | null
-  createdAt: Date
-  isCompleted: boolean
-  label: string
-  name: string
-  parent: string | null
-  project: ProjectState
-  stage: number
 }
 
 export interface TrackState {

@@ -1,12 +1,14 @@
 <script lang="ts">
 import { defineComponent, ref } from "vue";
 import { mapState } from "vuex";
+import CreateNewProject from "../components/CreateNewProject.vue";
 
 export default defineComponent({
+  components: { CreateNewProject },
   setup() {
     const isSelectProjectModalOpen = ref(false);
     const newTodoName = ref("");
-    const submitNewTodo = function () {
+    const submitNewTodo = () => {
       if (newTodoName.value == "") return;
       isSelectProjectModalOpen.value = true;
     };
@@ -19,7 +21,7 @@ export default defineComponent({
   },
 
   computed: {
-    ...mapState(["user", "vault"]),
+    ...mapState(["user", "vault", "project"]),
   },
 });
 </script>
@@ -34,7 +36,7 @@ export default defineComponent({
         v-model.trim="newTodoName"
         class="
           text-pink-500
-          border border-gray-800
+          border-2 border-gray-800
           rounded-md
           shadow-md
           w-full
@@ -43,7 +45,7 @@ export default defineComponent({
           bg-gray-800
           placeholder-gray-600
           focus:outline-none
-          focus:border focus:border-pink-600
+          focus:border focus:border-purple-600
           focus:placeholder-gray-700
           transition
           duration-100
@@ -52,61 +54,12 @@ export default defineComponent({
         placeholder="Tugas baru"
       />
     </div>
-    <div
+    <create-new-project
+      @close-modal="isSelectProjectModalOpen = false"
       v-if="isSelectProjectModalOpen"
-      class="
-        fixed
-        top-0
-        left-0
-        h-screen
-        w-screen
-        bg-black bg-opacity-75
-        pt-40
-        flex
-        justify-center
-      "
-    >
-      <div class="w-1/3">
-        <div class="flex items-center justify-between mb-8">
-          <h3 class="font-bold">{{ newTodoName }}</h3>
-          <button @click="isSelectProjectModalOpen = false">x</button>
-        </div>
-        <div>
-          <div class="flex items-start space-x-2">
-            <input
-              type="text"
-              class="
-                px-4
-                py-2
-                rounded-md
-                bg-gray-800
-                w-1/2
-                focus:outline-none
-                focus:bg-purple-500
-                text-white
-                transition
-                duration-200
-              "
-              placeholder="Masukan nama proyek baru..."
-            />
-
-            <select
-              name="project"
-              class="
-                w-1/2
-                rounded-md
-                py-2
-                px-4
-                mb-4
-                bg-gray-800
-                focus:outline-none
-              "
-            >
-              <option value="default">default</option>
-            </select>
-          </div>
-        </div>
-      </div>
-    </div>
+      :newTodoName="newTodoName"
+      :vault="vault"
+      :projects="project.projects"
+    />
   </div>
 </template>

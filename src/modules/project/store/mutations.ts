@@ -1,5 +1,5 @@
 import { MutationTree } from 'vuex'
-import { ProjectState } from '../../../store/interface'
+import { ProjectState } from './interface'
 
 export const mutations: MutationTree<ProjectState> = {
   SET_PROJECTS(state: any, payload: any) {

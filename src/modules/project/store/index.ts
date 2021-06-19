@@ -1,6 +1,7 @@
 import { Module } from 'vuex'
-import { ProjectState, RootState } from '../../../store/interface'
+import { RootState } from '../../../store/interface'
 import { actions } from './actions'
+import { ProjectState } from './interface'
 import { mutations } from './mutations'
 
 const state: ProjectState = {

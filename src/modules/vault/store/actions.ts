@@ -1,9 +1,11 @@
-import { addDoc, collection, doc, getDoc, runTransaction } from 'firebase/firestore'
+import { addDoc, collection, doc, getDoc, increment, runTransaction } from 'firebase/firestore'
 import { ActionTree } from 'vuex'
+import { vault } from '.'
 import router from '../../../router'
 import { db } from '../../../services/firebase'
 import store from '../../../store'
-import { RootState, UserState, VaultState } from '../../../store/interface'
+import { RootState, UserState } from '../../../store/interface'
+import { VaultState } from './interface'
 
 export const actions: ActionTree<VaultState, RootState> = {
   /**
@@ -81,9 +83,8 @@ export const actions: ActionTree<VaultState, RootState> = {
             image: user.image,
             activeVault: res.id,
           }
-
+          store.dispatch('project/createNewProject', { name: 'Inbox', vaultId: res.id })
           store.commit('user/SET_USER', userdata)
-
           store.commit('SET_ACTIVE_VAULT', res.id)
         }
       })
@@ -100,5 +101,18 @@ export const actions: ActionTree<VaultState, RootState> = {
 
   fetchVault(_: any, vaultId: string) {
     const vaultRef = doc(db, 'vaults', vaultId)
+  },
+
+  updateVaultTotalTask(_: any, payload: any) {
+    const vaultRef = doc(db, 'vaults', payload.vaultId)
+    if (payload.type == 'add') {
+      runTransaction(db, async (t) => {
+        await t.get(vaultRef).then(() => {
+          t.update(vaultRef, {
+            totalTask: increment(Number(1)),
+          })
+        })
+      })
+    }
   },
 }
