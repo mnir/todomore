@@ -7,6 +7,25 @@ import { RootState, UserState, VaultState } from '../../../store/interface'
 
 export const actions: ActionTree<VaultState, RootState> = {
   /**
+   * @param _
+   * @param user
+   */
+  checkUserVault({ dispatch }: any, user: UserState) {
+    if (user.activeVault == null) {
+      // Create new vault
+      dispatch('createVault', user)
+    } else {
+      // Redirect ke dashboard
+      router.push({
+        name: 'Dashboard',
+        params: {
+          vaultId: user.activeVault,
+        },
+      })
+      store.commit('SET_APP_STATUS', true)
+    }
+  },
+  /**
    *
    * @param _
    * @param user

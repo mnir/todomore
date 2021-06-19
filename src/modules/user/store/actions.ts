@@ -34,7 +34,7 @@ export const actions: ActionTree<UserState, RootState> = {
             activeVault: res.data().activeVault,
           }
           commit('SET_USER', userdata)
-          dispatch('checkUserVault', userdata)
+          store.dispatch('vault/checkUserVault', userdata)
         } else {
           // TODO: Simpan data user kedalam database
           dispatch('createUser', user)
@@ -51,7 +51,7 @@ export const actions: ActionTree<UserState, RootState> = {
    * @param _
    * @param payload
    */
-  createUser({ dispatch }: any, user: any) {
+  createUser(_: any, user: any) {
     const userRef = doc(db, 'users', user.uid)
 
     const userdata: UserState = {
@@ -62,29 +62,11 @@ export const actions: ActionTree<UserState, RootState> = {
       activeVault: null,
     }
     try {
-      setDoc(userRef, userdata).then(dispatch('checkUserVault', userdata))
+      setDoc(userRef, userdata).then(() => {
+        store.dispatch('vault/checkUserVault', userdata)
+      })
     } catch (err) {
       throw err
-    }
-  },
-
-  /**
-   * @param _
-   * @param user
-   */
-  checkUserVault({ dispatch }: any, user: UserState) {
-    if (user.activeVault == null) {
-      // Create new vault
-      store.dispatch('vault/createVault', user)
-    } else {
-      // Redirect ke dashboard
-      router.push({
-        name: 'Dashboard',
-        params: {
-          vaultId: user.activeVault,
-        },
-      })
-      store.commit('SET_APP_STATUS', true)
     }
   },
 }
