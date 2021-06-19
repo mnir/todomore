@@ -32,7 +32,6 @@ export default defineComponent({
         :to="{
           name: 'Dashboard',
           params: {
-            userId: $route.params.userId,
             vaultId: $route.params.vaultId,
           },
         }"
@@ -44,7 +43,6 @@ export default defineComponent({
         :to="{
           name: 'Todo',
           params: {
-            userId: $route.params.userId,
             vaultId: $route.params.vaultId,
           },
         }"
@@ -63,7 +61,7 @@ export default defineComponent({
     </div>
   </div>
   <div class="fixed top-0 right-0 h-10 p-4">
-    <button>
+    <button v-if="user.image !== ''">
       <img :src="user.image" class="w-8 rounded-full" :alt="user.name" />
     </button>
   </div>

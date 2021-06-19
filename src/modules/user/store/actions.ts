@@ -51,7 +51,7 @@ export const actions: ActionTree<UserState, RootState> = {
    * @param _
    * @param payload
    */
-  createUser(_: any, user: any) {
+  createUser({ commit }: any, user: any) {
     const userRef = doc(db, 'users', user.uid)
 
     const userdata: UserState = {
@@ -63,7 +63,8 @@ export const actions: ActionTree<UserState, RootState> = {
     }
     try {
       setDoc(userRef, userdata).then(() => {
-        store.dispatch('vault/checkUserVault', userdata)
+        commit('SET_USER', userdata)
+        store.dispatch('vault/createVault', userdata)
       })
     } catch (err) {
       throw err

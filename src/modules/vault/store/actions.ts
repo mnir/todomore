@@ -51,11 +51,12 @@ export const actions: ActionTree<VaultState, RootState> = {
             id: user.id,
             name: user.name,
             email: user.email,
-            image: user.id,
+            image: user.image,
             activeVault: res.id,
           }
 
           store.commit('user/SET_USER', userdata)
+          store.commit('SET_ACTIVE_VAULT', res.id)
         }
       })
 
