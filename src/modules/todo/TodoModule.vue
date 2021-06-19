@@ -1,3 +1,3 @@
 <template>
-  <div></div>
+  <router-view class="pl-64"></router-view>
 </template>
