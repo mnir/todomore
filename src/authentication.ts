@@ -3,6 +3,7 @@ import router from './router'
 import store from './store'
 
 onAuthStateChanged(getAuth(), (user) => {
+  // Check user state
   if (!user) {
     router.push({ name: 'Home' })
   } else {

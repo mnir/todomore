@@ -53,14 +53,14 @@ export const actions: ActionTree<UserState, RootState> = {
    * @param _
    * @param payload
    */
-  createUser({ dispatch }: any, payload: any) {
-    const userRef = doc(db, 'users', payload.uid)
+  createUser({ dispatch }: any, user: any) {
+    const userRef = doc(db, 'users', user.uid)
 
     const userdata: UserState = {
-      id: payload.uid,
-      name: payload.displayName,
-      email: payload.email,
-      image: payload.photoURL,
+      id: user.uid,
+      name: user.displayName,
+      email: user.email,
+      image: user.photoURL,
       activeVault: null,
     }
     try {
@@ -71,41 +71,15 @@ export const actions: ActionTree<UserState, RootState> = {
   },
 
   /**
-   * * Cek apakah user sudah memiliki vault
-   *
    * @param _
    * @param user
    */
-  checkUserVault(_: any, user: UserState) {
-    const userRef = doc(db, 'users', user.id)
+  checkUserVault({ dispatch }: any, user: UserState) {
     if (user.activeVault == null) {
-      // create new vault
-      const vaultRef = collection(db, 'vaults')
-      addDoc(vaultRef, {
-        owner: {
-          id: user.id,
-          name: user.name,
-        },
-      }).then((res) => {
-        runTransaction(db, async (t) => {
-          const userDoc = await t.get(userRef)
-          if (userDoc.exists()) {
-            t.update(userRef, {
-              activeVault: res.id,
-            })
-          }
-        })
-        router.push({
-          name: 'Dashboard',
-          params: {
-            userId: user.id,
-            vaultId: res.id,
-          },
-        })
-        store.commit('SET_APP_STATUS', true)
-      })
+      // Create new vault
+      dispatch('createVault', user)
     } else {
-      // redirect ke dashboard
+      // Redirect ke dashboard
       router.push({
         name: 'Dashboard',
         params: {
@@ -115,5 +89,49 @@ export const actions: ActionTree<UserState, RootState> = {
       })
       store.commit('SET_APP_STATUS', true)
     }
+  },
+
+  /**
+   *
+   * @param _
+   * @param user
+   */
+  createVault(_: any, user: UserState) {
+    const userRef = doc(db, 'users', user.id)
+    const vaultRef = collection(db, 'vaults')
+    addDoc(vaultRef, {
+      owner: {
+        id: user.id,
+        name: user.name,
+      },
+    }).then((res) => {
+      runTransaction(db, async (t) => {
+        const userDoc = await t.get(userRef)
+        if (userDoc.exists()) {
+          t.update(userRef, {
+            activeVault: res.id,
+          })
+
+          const userdata: UserState = {
+            id: user.id,
+            name: user.name,
+            email: user.email,
+            image: user.id,
+            activeVault: res.id,
+          }
+
+          store.commit('user/SET_USER', userdata)
+        }
+      })
+
+      router.push({
+        name: 'Dashboard',
+        params: {
+          userId: user.id,
+          vaultId: res.id,
+        },
+      })
+      store.commit('SET_APP_STATUS', true)
+    })
   },
 }

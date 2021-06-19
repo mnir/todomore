@@ -1,5 +1,5 @@
 <script lang="ts">
-import { computed, defineComponent, PropType } from "vue";
+import { defineComponent, PropType } from "vue";
 import { mapState } from "vuex";
 import { ProjectState, UserState } from "../store/interface";
 import NavigationProjectList from "./NavigationProjectList.vue";
@@ -23,7 +23,6 @@ export default defineComponent({
   },
 });
 </script>
-
 
 <template>
   <div class="fixed top-0 left-0 w-64 h-screen bg-white dark:bg-gray-900">
