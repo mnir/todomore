@@ -34,10 +34,8 @@ export const actions: ActionTree<UserState, RootState> = {
             activeVault: res.data().activeVault,
           }
           commit('SET_USER', userdata)
-          console.log('ada')
           dispatch('checkUserVault', userdata)
         } else {
-          console.log('gak ada')
           // TODO: Simpan data user kedalam database
           dispatch('createUser', user)
         }
@@ -77,61 +75,16 @@ export const actions: ActionTree<UserState, RootState> = {
   checkUserVault({ dispatch }: any, user: UserState) {
     if (user.activeVault == null) {
       // Create new vault
-      dispatch('createVault', user)
+      store.dispatch('vault/createVault', user)
     } else {
       // Redirect ke dashboard
       router.push({
         name: 'Dashboard',
         params: {
-          userId: user.id,
           vaultId: user.activeVault,
         },
       })
       store.commit('SET_APP_STATUS', true)
     }
-  },
-
-  /**
-   *
-   * @param _
-   * @param user
-   */
-  createVault(_: any, user: UserState) {
-    const userRef = doc(db, 'users', user.id)
-    const vaultRef = collection(db, 'vaults')
-    addDoc(vaultRef, {
-      owner: {
-        id: user.id,
-        name: user.name,
-      },
-    }).then((res) => {
-      runTransaction(db, async (t) => {
-        const userDoc = await t.get(userRef)
-        if (userDoc.exists()) {
-          t.update(userRef, {
-            activeVault: res.id,
-          })
-
-          const userdata: UserState = {
-            id: user.id,
-            name: user.name,
-            email: user.email,
-            image: user.id,
-            activeVault: res.id,
-          }
-
-          store.commit('user/SET_USER', userdata)
-        }
-      })
-
-      router.push({
-        name: 'Dashboard',
-        params: {
-          userId: user.id,
-          vaultId: res.id,
-        },
-      })
-      store.commit('SET_APP_STATUS', true)
-    })
   },
 }

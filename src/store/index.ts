@@ -2,6 +2,7 @@ import { createStore, StoreOptions } from 'vuex'
 import { RootState } from './interface'
 import { user } from '../modules/user/store'
 import { project } from '../modules/project/store'
+import { vault } from '../modules/vault/store'
 
 const store: StoreOptions<RootState> = {
   state: {
@@ -20,6 +21,7 @@ const store: StoreOptions<RootState> = {
   modules: {
     user,
     project,
+    vault,
   },
 }
 

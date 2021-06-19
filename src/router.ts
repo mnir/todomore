@@ -1,6 +1,6 @@
-import { createWebHistory, createRouter } from 'vue-router';
+import { createWebHistory, createRouter } from 'vue-router'
 
-import Home from './components/Home.vue';
+import Home from './components/Home.vue'
 
 const routes = [
   {
@@ -9,7 +9,7 @@ const routes = [
     component: Home,
   },
   {
-    path: '/dashboard/:userId/:vaultId',
+    path: '/dashboard/:vaultId',
     component: () => import(/* webpackChunkName="dashboard" */ './modules/dashboard/DashboardModule.vue'),
     children: [
       {
@@ -20,7 +20,7 @@ const routes = [
     ],
   },
   {
-    path: '/todo/:userId/:vaultId',
+    path: '/todo/:vaultId',
     component: () => import(/* webpackChunkName="dashboard" */ './modules/todo/TodoModule.vue'),
     children: [
       {
@@ -31,7 +31,7 @@ const routes = [
     ],
   },
   {
-    path: '/project/:userId/:vaultId/:projectId',
+    path: '/project/:vaultId/:projectId',
     component: () => import(/* webpackChunkName="dashboard" */ './modules/project/ProjectModule.vue'),
     children: [
       {
@@ -41,11 +41,11 @@ const routes = [
       },
     ],
   },
-];
+]
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
-});
+})
 
-export default router;
+export default router

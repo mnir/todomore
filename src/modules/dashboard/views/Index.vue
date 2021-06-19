@@ -33,19 +33,20 @@ export default defineComponent({
         type="text"
         v-model.trim="newTodoName"
         class="
-          focus:outline-none
+          text-pink-500
+          border border-gray-800
+          rounded-md
+          shadow-md
           w-full
           py-2
           px-4
           bg-gray-800
-          rounded-md
-          shadow-md
           placeholder-gray-600
-          focus:bg-pink-600
-          focus:placeholder-pink-300
-          text-gray-900
+          focus:outline-none
+          focus:border focus:border-pink-600
+          focus:placeholder-gray-700
           transition
-          duration-200
+          duration-100
         "
         @keyup.enter="submitNewTodo"
         placeholder="Tugas baru"
@@ -66,13 +67,33 @@ export default defineComponent({
       "
     >
       <div class="w-1/3">
-        <h3 class="font-bold mb-8">{{ newTodoName }}</h3>
+        <div class="flex items-center justify-between mb-8">
+          <h3 class="font-bold">{{ newTodoName }}</h3>
+          <button @click="isSelectProjectModalOpen = false">x</button>
+        </div>
         <div>
-          <div>
+          <div class="flex items-start space-x-2">
+            <input
+              type="text"
+              class="
+                px-4
+                py-2
+                rounded-md
+                bg-gray-800
+                w-1/2
+                focus:outline-none
+                focus:bg-purple-500
+                text-white
+                transition
+                duration-200
+              "
+              placeholder="Masukan nama proyek baru..."
+            />
+
             <select
               name="project"
               class="
-                w-full
+                w-1/2
                 rounded-md
                 py-2
                 px-4
@@ -80,24 +101,10 @@ export default defineComponent({
                 bg-gray-800
                 focus:outline-none
               "
-            ></select>
+            >
+              <option value="default">default</option>
+            </select>
           </div>
-          <input
-            type="text"
-            class="
-              px-2
-              py-2
-              rounded-md
-              bg-gray-800
-              w-full
-              focus:outline-none
-              focus:bg-purple-500
-              text-white
-              transition
-              duration-200
-            "
-            placeholder="Pilih proyek"
-          />
         </div>
       </div>
     </div>

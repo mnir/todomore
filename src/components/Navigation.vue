@@ -68,3 +68,9 @@ export default defineComponent({
     </button>
   </div>
 </template>
+
+<style lang="css" scoped>
+.router-link-active {
+  @apply text-pink-400;
+}
+</style>
