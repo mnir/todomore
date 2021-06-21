@@ -22,7 +22,15 @@ export default defineComponent({
         projectId: project.id,
       },
     }"
-    class="py-4 px-2 dark:hover:bg-gray-800 flex justify-between items-center"
+    class="
+      py-4
+      px-2
+      dark:hover:bg-gray-800
+      flex
+      justify-between
+      items-center
+      mb-1
+    "
   >
     <div>
       {{ project.name }}

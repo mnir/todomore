@@ -6,9 +6,10 @@ import { UserState } from "../store/interface";
 import AddIcon from "./icons/AddIcon.vue";
 import NavigationProjectList from "./NavigationProjectList.vue";
 import store from "../store";
+import NavLink from "./NavLink.vue";
 
 export default defineComponent({
-  components: { NavigationProjectList, AddIcon },
+  components: { NavigationProjectList, AddIcon, NavLink },
   props: {
     user: {
       required: true,
@@ -48,28 +49,8 @@ export default defineComponent({
 <template>
   <div class="fixed top-0 left-0 w-64 h-screen bg-white dark:bg-gray-900">
     <div class="p-2">
-      <router-link
-        class="block w-full py-2 px-2 dark:hover:bg-gray-800 rounded"
-        :to="{
-          name: 'Dashboard',
-          params: {
-            vaultId: $route.params.vaultId,
-          },
-        }"
-      >
-        Dashboard
-      </router-link>
-      <router-link
-        class="block py-2 w-full px-2 dark:hover:bg-gray-800 rounded"
-        :to="{
-          name: 'Todo',
-          params: {
-            vaultId: $route.params.vaultId,
-          },
-        }"
-      >
-        Tugas
-      </router-link>
+      <nav-link text="Dashboard" name="Dashboard" />
+      <nav-link text="Tugas" name="Todo" />
       <div
         class="
           mt-8
@@ -132,7 +113,7 @@ export default defineComponent({
 </template>
 
 <style lang="css" scoped>
-.router-link-active {
-  @apply text-pink-400;
+.router-link-exact-active {
+  @apply text-pink-400 bg-gray-800;
 }
 </style>
