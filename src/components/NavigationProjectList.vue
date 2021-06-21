@@ -16,7 +16,7 @@ export default defineComponent({
 <template>
   <router-link
     :to="{
-      name: 'Project',
+      name: 'ProjectShow',
       params: {
         vaultId: $route.params.vaultId,
         projectId: project.id,

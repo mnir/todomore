@@ -110,6 +110,12 @@ export default defineComponent({
         />
       </div>
       <div v-if="project">
+        <router-link
+          :to="{ name: 'Project', params: { vaultId: $route.params.vaultId } }"
+          class="block w-full py-4 px-2 hover:bg-gray-800 rounded"
+        >
+          All Projects
+        </router-link>
         <navigation-project-list
           v-for="project in project.projects"
           :key="project.id"

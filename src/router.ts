@@ -21,23 +21,28 @@ const routes = [
   },
   {
     path: '/todo/:vaultId',
-    component: () => import(/* webpackChunkName="dashboard" */ './modules/todo/TodoModule.vue'),
+    component: () => import(/* webpackChunkName="todo" */ './modules/todo/TodoModule.vue'),
     children: [
       {
         path: '',
         name: 'Todo',
-        component: () => import(/* webpackChunkName="dashboard" */ './modules/todo/views/Index.vue'),
+        component: () => import(/* webpackChunkName="todo" */ './modules/todo/views/Index.vue'),
       },
     ],
   },
   {
-    path: '/project/:vaultId/:projectId',
-    component: () => import(/* webpackChunkName="dashboard" */ './modules/project/ProjectModule.vue'),
+    path: '/projects/:vaultId',
+    component: () => import(/* webpackChunkName="project" */ './modules/project/ProjectModule.vue'),
     children: [
       {
         path: '',
         name: 'Project',
-        component: () => import(/* webpackChunkName="dashboard" */ './modules/project/views/Index.vue'),
+        component: () => import(/* webpackChunkName="project" */ './modules/project/views/Index.vue'),
+      },
+      {
+        path: ':projectId',
+        name: 'ProjectShow',
+        component: () => import(/* webpackChunkName="project" */ './modules/project/views/Project.vue'),
       },
     ],
   },

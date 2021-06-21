@@ -1,27 +1,13 @@
 <script lang="ts">
-import { computed, defineComponent, PropType } from "vue";
-import { useRoute } from "vue-router";
-import { useStore } from "vuex";
-import { ProjectState } from "../store/interface";
+import { defineComponent } from "vue";
+import { mapState } from "vuex";
+import ProjectList from "../components/ProjectList.vue";
 
 export default defineComponent({
-  setup() {
-    const store = useStore();
-    const route = useRoute();
-
-    const projects = computed(() => {
-      return store.state.project.projects;
-    });
-
-    const project = computed(() => {
-      return projects.value.filter((item: ProjectState) => {
-        return item.id == route.params.projectId;
-      });
-    });
-
-    return {
-      project,
-    };
+  components: { ProjectList },
+  setup() {},
+  computed: {
+    ...mapState(["project"]),
   },
 });
 </script>
@@ -29,6 +15,6 @@ export default defineComponent({
 
 <template>
   <div>
-    <div>{{ project[0].name }}</div>
+    <project-list :projects="project.projects" />
   </div>
 </template>

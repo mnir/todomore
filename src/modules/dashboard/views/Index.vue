@@ -11,6 +11,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <div>Dashboard</div>
-  <div></div>
+  <main class="w-2/3 mx-auto pt-12">
+    <h1 class="text-2xl font-bold italic">Dashboard</h1>
+  </main>
 </template>
