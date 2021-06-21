@@ -14,19 +14,24 @@ export default defineComponent({
       isSelectProjectModalOpen.value = true;
     };
 
+    const todoCreated = () => {
+      isSelectProjectModalOpen.value = false;
+      newTodoName.value = "";
+    };
+
     return {
       newTodoName,
       isSelectProjectModalOpen,
       submitNewTodo,
+      todoCreated,
     };
   },
 
   computed: {
-    ...mapState(["user", "vault", "project", "todo"]),
+    ...mapState(["user", "activeVault", "project", "todo"]),
   },
 });
 </script>
-
 
 <template>
   <div class="w-2/3 mx-auto pt-12">
@@ -57,11 +62,12 @@ export default defineComponent({
     </div>
     <div class="mb-8">
       <create-new-project
-        @close-modal="isSelectProjectModalOpen = false"
         v-if="isSelectProjectModalOpen"
-        :newTodoName="newTodoName"
-        :vault="vault"
+        :vault="activeVault"
         :projects="project.projects"
+        :newTodoName="newTodoName"
+        @close-modal="isSelectProjectModalOpen = false"
+        @todo-created="todoCreated"
       />
     </div>
     <todo-list v-for="todo in todo.todos" :key="todo.id" :todo="todo" />

@@ -7,11 +7,12 @@ import { TodoState } from './interface'
 
 export const actions: ActionTree<TodoState, RootState> = {
   /**
-   * Create new todo
+   * * Create new todo
    * @param _
    * @param payload
    */
   async createNewTodo(_: any, payload: any) {
+    console.log(payload)
     const vaultRef = doc(db, 'vaults', payload.vaultId)
     const todoRef = collection(vaultRef, 'todos')
 
@@ -37,6 +38,11 @@ export const actions: ActionTree<TodoState, RootState> = {
       })
   },
 
+  /**
+   * * Fetch all todos
+   * @param param0
+   * @param vaultId
+   */
   fetchTodos({ commit }: any, vaultId: any) {
     const vaultRef = doc(db, 'vaults', vaultId)
     const todoRef = collection(vaultRef, 'todos')

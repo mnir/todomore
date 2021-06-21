@@ -1,6 +1,5 @@
 <script lang="ts">
 import { defineComponent, PropType, ref } from "vue";
-import { VaultState } from "../../vault/store/interface";
 import CloseIcon from "../../../components/icons/CloseIcon.vue";
 import { ProjectState } from "../../project/store/interface";
 import store from "../../../store";
@@ -9,7 +8,7 @@ export default defineComponent({
   props: {
     vault: {
       required: true,
-      type: Object as PropType<VaultState>,
+      type: String,
     },
     newTodoName: {
       required: true,
@@ -21,22 +20,22 @@ export default defineComponent({
     },
   },
   components: { CloseIcon },
-  setup(props, ctx) {
+  setup(props, { emit }) {
     const newProjectName = ref("");
     const selectedProject = ref("");
 
     const submitCloseProjectModal = () => {
-      ctx.emit("close-modal");
+      emit("close-modal");
     };
 
     const submitNewTask = () => {
       const data = {
-        vaultId: props.vault.id,
+        vaultId: props.vault,
         name: props.newTodoName,
         project: selectedProject.value,
       };
       store.dispatch("todo/createNewTodo", data).then(() => {
-        ctx.emit("close-modal");
+        emit("todo-created");
       });
     };
 
@@ -67,7 +66,7 @@ export default defineComponent({
   >
     <div class="w-1/3">
       <div class="flex items-center justify-between mb-8">
-        <h3 class="font-bold text-pink-500">{{ newTodoName }}</h3>
+        <h3 class="font-bold text-pink-500">{{ newTodoName }} - {{ vault }}</h3>
         <button @click="submitCloseProjectModal">
           <close-icon />
         </button>
