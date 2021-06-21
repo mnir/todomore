@@ -3,11 +3,7 @@ node_modules
 dist
 dist-ssr
 *.local
-
-
-
 firebase-debug.log
 firestore-debug.log
 
 *.log
-src/services/
