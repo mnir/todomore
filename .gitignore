@@ -10,4 +10,4 @@ firebase-debug.log
 firestore-debug.log
 
 *.log
-src/services/firebase.ts
+src/services/
