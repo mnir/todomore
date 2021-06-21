@@ -1,4 +1,4 @@
-import { addDoc, collection, doc, getDocs, onSnapshot } from 'firebase/firestore'
+import { addDoc, collection, doc, onSnapshot, orderBy, query } from 'firebase/firestore'
 import { ActionTree } from 'vuex'
 import { db } from '../../../services/firebase'
 import store from '../../../store'
@@ -12,7 +12,6 @@ export const actions: ActionTree<TodoState, RootState> = {
    * @param payload
    */
   async createNewTodo(_: any, payload: any) {
-    console.log(payload)
     const vaultRef = doc(db, 'vaults', payload.vaultId)
     const todoRef = collection(vaultRef, 'todos')
 
@@ -46,6 +45,7 @@ export const actions: ActionTree<TodoState, RootState> = {
   fetchTodos({ commit }: any, vaultId: any) {
     const vaultRef = doc(db, 'vaults', vaultId)
     const todoRef = collection(vaultRef, 'todos')
+    const q = query(todoRef, orderBy('createdAt', 'desc'))
     onSnapshot(todoRef, (snap) => {
       const array: any = []
       snap.forEach((doc) => {

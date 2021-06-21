@@ -4,6 +4,8 @@ dist
 dist-ssr
 *.local
 
+
+
 firebase-debug.log
 firestore-debug.log
 

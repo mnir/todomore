@@ -1,15 +1,9 @@
-import { initializeApp } from 'firebase/app';
-import { getFirestore, useFirestoreEmulator } from 'firebase/firestore';
+import { initializeApp } from 'firebase/app'
+import { getFirestore, useFirestoreEmulator } from 'firebase/firestore'
 
 initializeApp({
-  apiKey: 'AIzaSyD6RJx5vO_H15eWy7BIPoszYH7UOKN0_sg',
-  authDomain: 'rangkoding-todomer.firebaseapp.com',
-  projectId: 'rangkoding-todomer',
-  storageBucket: 'rangkoding-todomer.appspot.com',
-  messagingSenderId: '688740033613',
-  appId: '1:688740033613:web:460060c1ec92bff713a804',
-  // measurementId: 'G-J4G5WDZYCN',
-});
+  // Firebase project config here...
+})
 
-export const db = getFirestore();
-useFirestoreEmulator(db, 'localhost', 8080);
+export const db = getFirestore()
+useFirestoreEmulator(db, 'localhost', 8080)

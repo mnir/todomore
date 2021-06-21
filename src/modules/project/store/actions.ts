@@ -1,7 +1,8 @@
 import { addDoc, collection, doc, onSnapshot } from 'firebase/firestore'
 import { ActionTree } from 'vuex'
 import { db } from '../../../services/firebase'
-import { ProjectState, RootState } from '../../../store/interface'
+import { RootState } from '../../../store/interface'
+import { ProjectState } from './interface'
 
 export const actions: ActionTree<ProjectState, RootState> = {
   createNewProject({ commit }: any, payload: any) {

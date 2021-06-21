@@ -16,7 +16,7 @@ export default defineComponent({
     },
     projects: {
       required: true,
-      type: Array as PropType<ProjectState[]>,
+      type: Object as PropType<ProjectState[]>,
     },
   },
   components: { CloseIcon },
@@ -66,8 +66,11 @@ export default defineComponent({
   >
     <div class="w-1/3">
       <div class="flex items-center justify-between mb-8">
-        <h3 class="font-bold text-pink-500">{{ newTodoName }} - {{ vault }}</h3>
-        <button @click="submitCloseProjectModal">
+        <h3 class="font-bold text-pink-500">{{ newTodoName }}</h3>
+        <button
+          @click="submitCloseProjectModal"
+          class="hover:bg-purple-500 rounded p-2 transition duration-200"
+        >
           <close-icon />
         </button>
       </div>
@@ -90,29 +93,6 @@ export default defineComponent({
             "
             placeholder="Masukan nama proyek baru..."
           />
-
-          <select
-            v-if="projects"
-            v-model="selectedProject"
-            name="project"
-            class="
-              w-1/2
-              rounded-md
-              py-2
-              px-4
-              mb-4
-              bg-gray-800
-              focus:outline-none
-            "
-          >
-            <option
-              v-for="project in projects"
-              :key="project.id"
-              :value="project"
-            >
-              {{ project.name }}
-            </option>
-          </select>
         </div>
         <div>
           <button

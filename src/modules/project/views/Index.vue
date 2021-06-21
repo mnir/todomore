@@ -2,7 +2,7 @@
 import { computed, defineComponent, PropType } from "vue";
 import { useRoute } from "vue-router";
 import { useStore } from "vuex";
-import { ProjectState } from "../../../store/interface";
+import { ProjectState } from "../store/interface";
 
 export default defineComponent({
   setup() {
