@@ -25,6 +25,8 @@ export default defineComponent({
       flex
       justify-between
       text-indigo-400
+      hover:bg-pink-500
+      hover:text-gray-900
     "
   >
     <div>

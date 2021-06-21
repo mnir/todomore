@@ -35,7 +35,7 @@ export default defineComponent({
 
 <template>
   <div class="w-2/3 mx-auto pt-12">
-    <div class="mb-8">Tugas</div>
+    <div class="mb-8 text-2xl font-bold italic">Tugas</div>
     <div>
       <input
         type="text"

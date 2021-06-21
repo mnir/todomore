@@ -2,9 +2,12 @@
 import { computed, defineComponent, PropType } from "vue";
 import { useRoute } from "vue-router";
 import { useStore } from "vuex";
+import { TodoState } from "../../todo/store/interface";
+import TodoItem from "../components/TodoItem.vue";
 import { ProjectState } from "../store/interface";
 
 export default defineComponent({
+  components: { TodoItem },
   setup() {
     const store = useStore();
     const route = useRoute();
@@ -19,8 +22,19 @@ export default defineComponent({
       });
     });
 
+    const todos = computed(() => {
+      return store.state.todo.todos;
+    });
+
+    const currentTodos = computed(() => {
+      return todos.value.filter((item: TodoState) => {
+        return item.project.id == route.params.projectId;
+      });
+    });
+
     return {
       project,
+      currentTodos,
     };
   },
 });
@@ -28,7 +42,12 @@ export default defineComponent({
 
 
 <template>
-  <div>
-    <div>{{ project[0].name }}</div>
+  <div class="w-2/3 mx-auto mt-12">
+    <h2 class="text-xl font-bold mb-8">{{ project[0].name }}</h2>
+    <div>
+      <div v-for="todo in currentTodos" :key="todo.id">
+        <todo-item :todo="todo" />
+      </div>
+    </div>
   </div>
 </template>
