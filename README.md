@@ -1,6 +1,12 @@
 # Rangkoding TodoMore
 
-Author [Rang Koding](https://rangkoding.com)
+Author: Rangga Mauliza [Rang Koding](https://rangkoding.com)
+
+## Stacks
+
+- Vite
+- Vue 3
+- Firebase
 
 ## Flow
 

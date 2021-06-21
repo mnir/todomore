@@ -19,10 +19,12 @@ export default defineComponent({
       type: Object as PropType<ProjectState[]>,
     },
   },
+
   components: { CloseIcon },
+
   setup(props, { emit }) {
     const newProjectName = ref("");
-    const selectedProject = ref("");
+    const selectedProject = ref<ProjectState>();
 
     const submitCloseProjectModal = () => {
       emit("close-modal");
@@ -65,35 +67,55 @@ export default defineComponent({
     "
   >
     <div class="w-1/3">
-      <div class="flex items-center justify-between mb-8">
-        <h3 class="font-bold text-pink-500">{{ newTodoName }}</h3>
+      <div class="flex items-center justify-end mb-8">
         <button
           @click="submitCloseProjectModal"
-          class="hover:bg-purple-500 rounded p-2 transition duration-200"
+          class="
+            hover:bg-purple-500
+            rounded
+            p-2
+            transition
+            duration-200
+            focus:outline-none
+          "
         >
           <close-icon />
         </button>
       </div>
+
+      <h3 class="font-bold text-pink-500 mb-8 text-2xl">{{ newTodoName }}</h3>
+
+      <div class="mb-8">
+        <h3 class="font-bold mb-2">
+          Project
+          <span v-if="selectedProject">> {{ selectedProject.name }}</span>
+        </h3>
+
+        <template v-if="!selectedProject">
+          <div v-for="project in projects" :key="project.id">
+            <button
+              @click="selectedProject = project"
+              class="
+                focus:outline-none
+                block
+                w-full
+                text-left
+                px-4
+                py-4
+                bg-gray-900
+                rounded-md
+                hover:bg-pink-600
+                transition
+                duration-200
+              "
+            >
+              > {{ project.name }}
+            </button>
+          </div>
+        </template>
+      </div>
+
       <div>
-        <div class="flex items-start space-x-2">
-          <input
-            v-model="newProjectName"
-            type="text"
-            class="
-              px-4
-              py-2
-              rounded-md
-              bg-gray-800
-              w-1/2
-              focus:outline-none
-              focus:bg-purple-500
-              text-white
-              transition
-              duration-200
-            "
-            placeholder="Masukan nama proyek baru..."
-          />
-        </div>
         <div>
           <button
             @click="submitNewTask"
@@ -104,7 +126,7 @@ export default defineComponent({
               w-full
               block
               rounded-md
-              py-2
+              py-6
               uppercase
               text-sm
               font-bold
