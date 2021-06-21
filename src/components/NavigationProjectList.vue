@@ -22,8 +22,13 @@ export default defineComponent({
         projectId: project.id,
       },
     }"
-    class="block py-1 px-2 dark:hover:bg-gray-800"
+    class="py-4 px-2 dark:hover:bg-gray-800 flex justify-between items-center"
   >
-    {{ project.name }}
+    <div>
+      {{ project.name }}
+    </div>
+    <div>
+      {{ project.taskCount }}
+    </div>
   </router-link>
 </template>

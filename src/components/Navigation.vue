@@ -93,6 +93,7 @@ export default defineComponent({
             duration-200
             rounded
             p-2
+            -mr-4
           "
         >
           <add-icon />

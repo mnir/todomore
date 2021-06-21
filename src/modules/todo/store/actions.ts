@@ -29,8 +29,8 @@ export const actions: ActionTree<TodoState, RootState> = {
       parent: null,
       stage: Number(1),
     })
-      .then(() => {
-        store.dispatch('vault/updateVaultTotalTask', { vaultId: payload.vaultId, type: 'add' })
+      .then(async () => {
+        await store.dispatch('project/updateTaskCount', { projectId: payload.project.id, vaultId: payload.vaultId, type: 'add' })
       })
       .catch((err) => {
         throw err

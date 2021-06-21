@@ -1,6 +1,7 @@
-import { addDoc, collection, doc, onSnapshot } from 'firebase/firestore'
+import { addDoc, collection, doc, getDoc, increment, onSnapshot, runTransaction } from 'firebase/firestore'
 import { ActionTree } from 'vuex'
 import { db } from '../../../services/firebase'
+import store from '../../../store'
 import { RootState } from '../../../store/interface'
 import { ProjectState } from './interface'
 
@@ -20,6 +21,7 @@ export const actions: ActionTree<ProjectState, RootState> = {
       isDefault: Boolean(true),
     })
   },
+
   /**
    * Fetch the projects
    * @param param0
@@ -44,5 +46,26 @@ export const actions: ActionTree<ProjectState, RootState> = {
       })
       commit('SET_PROJECTS', array)
     })
+  },
+
+  /**
+   *
+   * @param _
+   * @param payload vaultId, projectId
+   */
+  updateTaskCount(_: any, payload: any) {
+    console.log(payload)
+    const vaultRef = doc(db, 'vaults', payload.vaultId)
+    const projectRef = doc(vaultRef, 'projects', payload.projectId)
+
+    runTransaction(db, async (t) => {
+      await getDoc(projectRef).then(() => {
+        t.update(projectRef, {
+          taskCount: increment(Number(1)),
+        })
+      })
+    })
+
+    store.dispatch('vault/updateVaultTotalTask', { vaultId: payload.vaultId, type: 'add' })
   },
 }
