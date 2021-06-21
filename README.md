@@ -6,7 +6,8 @@ Author: Rangga Mauliza [Rang Koding](https://rangkoding.com)
 
 - Vite
 - Vue 3
-- Firebase
+- Firebase (v9.0.0-beta.5)
+- Tailwind CSS
 
 ## Flow
 

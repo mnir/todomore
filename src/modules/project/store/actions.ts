@@ -5,11 +5,16 @@ import { RootState } from '../../../store/interface'
 import { ProjectState } from './interface'
 
 export const actions: ActionTree<ProjectState, RootState> = {
-  createNewProject({ commit }: any, payload: any) {
+  /**
+   * * Create new project
+   * @param _
+   * @param payload
+   */
+  async createNewProject(_: any, payload: any) {
     const vaultRef = doc(db, 'vaults', payload.vaultId)
     const projectRef = collection(vaultRef, 'projects')
 
-    addDoc(projectRef, {
+    await addDoc(projectRef, {
       name: payload.name,
       taskCount: Number(0),
       isDefault: Boolean(true),

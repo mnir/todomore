@@ -1,19 +1,44 @@
 <script lang="ts">
-import { defineComponent, PropType } from "vue";
+import { defineComponent, PropType, ref } from "vue";
 import { mapState } from "vuex";
-import { ProjectState } from "../modules/project/store/interface";
+import { useRoute } from "vue-router";
 import { UserState } from "../store/interface";
+import AddIcon from "./icons/AddIcon.vue";
 import NavigationProjectList from "./NavigationProjectList.vue";
+import store from "../store";
 
 export default defineComponent({
-  components: { NavigationProjectList },
+  components: { NavigationProjectList, AddIcon },
   props: {
     user: {
       required: true,
       type: Object as PropType<UserState>,
     },
   },
-  setup() {},
+  setup() {
+    const route = useRoute();
+
+    const isCreateProjectInputOpen = ref(false);
+    const projectName = ref("");
+
+    const submitNewProject = async () => {
+      isCreateProjectInputOpen.value = false;
+      if (projectName.value == "") return;
+
+      const data = {
+        name: projectName.value,
+        vaultId: route.params.vaultId,
+      };
+      await store.dispatch("project/createNewProject", data);
+      projectName.value = "";
+    };
+
+    return {
+      projectName,
+      isCreateProjectInputOpen,
+      submitNewProject,
+    };
+  },
   computed: {
     ...mapState(["project"]),
   },
@@ -45,8 +70,43 @@ export default defineComponent({
       >
         Tugas
       </router-link>
-      <div class="mt-8 px-2 text-xs text-gray-600 uppercase tracking-wider">
-        Proyek
+      <div
+        class="
+          mt-8
+          px-2
+          text-gray-600
+          uppercase
+          tracking-wider
+          flex
+          justify-between
+          items-center
+        "
+      >
+        <div class="text-xs">Proyek</div>
+        <button
+          @click="isCreateProjectInputOpen = true"
+          class="
+            focus:outline-none
+            hover:bg-purple-500
+            hover:text-white
+            transition
+            duration-200
+            rounded
+            p-2
+          "
+        >
+          <add-icon />
+        </button>
+      </div>
+      <div class="px-2 mb-4" v-if="isCreateProjectInputOpen">
+        <input
+          v-model="projectName"
+          type="text"
+          class="focus:outline-none py-2 px-4 rounded dark:bg-gray-800"
+          placeholder="Nama proyek..."
+          @keyup.enter="submitNewProject"
+          @blur="isCreateProjectInputOpen = false"
+        />
       </div>
       <div v-if="project">
         <navigation-project-list
