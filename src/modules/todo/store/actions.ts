@@ -1,4 +1,4 @@
-import { addDoc, collection, doc } from 'firebase/firestore'
+import { addDoc, collection, doc, getDocs, onSnapshot } from 'firebase/firestore'
 import { ActionTree } from 'vuex'
 import { db } from '../../../services/firebase'
 import store from '../../../store'
@@ -6,6 +6,11 @@ import { RootState } from '../../../store/interface'
 import { TodoState } from './interface'
 
 export const actions: ActionTree<TodoState, RootState> = {
+  /**
+   * Create new todo
+   * @param _
+   * @param payload
+   */
   async createNewTodo(_: any, payload: any) {
     const vaultRef = doc(db, 'vaults', payload.vaultId)
     const todoRef = collection(vaultRef, 'todos')
@@ -30,5 +35,29 @@ export const actions: ActionTree<TodoState, RootState> = {
       .catch((err) => {
         throw err
       })
+  },
+
+  fetchTodos({ commit }: any, vaultId: any) {
+    const vaultRef = doc(db, 'vaults', vaultId)
+    const todoRef = collection(vaultRef, 'todos')
+    onSnapshot(todoRef, (snap) => {
+      const array: any = []
+      snap.forEach((doc) => {
+        const data: TodoState = {
+          id: doc.id,
+          assignUser: doc.data().assignUser,
+          completedDate: doc.data().completedDate,
+          isCompleted: doc.data().isCompleted,
+          createdAt: doc.data().createdAt,
+          label: doc.data().label,
+          name: doc.data().name,
+          parent: doc.data().parent,
+          project: doc.data().project,
+          stage: doc.data().stage,
+        }
+        array.push(data)
+      })
+      commit('SET_TODOS', array)
+    })
   },
 }

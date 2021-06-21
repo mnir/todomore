@@ -1,6 +1,6 @@
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
-import { ProjectState } from "../store/interface";
+import { ProjectState } from "../modules/project/store/interface";
 
 export default defineComponent({
   props: {
@@ -18,7 +18,6 @@ export default defineComponent({
     :to="{
       name: 'Project',
       params: {
-        userId: $route.params.userId,
         vaultId: $route.params.vaultId,
         projectId: project.id,
       },

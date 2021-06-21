@@ -1,7 +1,8 @@
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
 import { mapState } from "vuex";
-import { ProjectState, UserState } from "../store/interface";
+import { ProjectState } from "../modules/project/store/interface";
+import { UserState } from "../store/interface";
 import NavigationProjectList from "./NavigationProjectList.vue";
 
 export default defineComponent({
@@ -14,12 +15,7 @@ export default defineComponent({
   },
   setup() {},
   computed: {
-    ...mapState("project", ["projects"]),
-    activeProjects(): ProjectState[] {
-      return this.projects.filter((item: ProjectState) => {
-        return item.taskCount;
-      });
-    },
+    ...mapState(["project"]),
   },
 });
 </script>
@@ -46,14 +42,15 @@ export default defineComponent({
             vaultId: $route.params.vaultId,
           },
         }"
-        >Tugas</router-link
       >
+        Tugas
+      </router-link>
       <div class="mt-8 px-2 text-xs text-gray-600 uppercase tracking-wider">
         Proyek
       </div>
-      <div v-if="projects">
+      <div v-if="project">
         <navigation-project-list
-          v-for="project in activeProjects"
+          v-for="project in project.projects"
           :key="project.id"
           :project="project"
         />

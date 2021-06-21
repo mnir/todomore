@@ -20,6 +20,7 @@ export default defineComponent({
     async fetchProjects() {
       const store = useStore();
       await store.dispatch("project/fetchProjects", this.$route.params.vaultId);
+      await store.dispatch("todo/fetchTodos", this.$route.params.vaultId);
       this.isModuleReady = true;
     },
   },

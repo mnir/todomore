@@ -2,6 +2,7 @@ import { Module } from 'vuex'
 import { RootState } from '../../../store/interface'
 import { TodoState } from './interface'
 import { actions } from './actions'
+import { mutations } from './mutations'
 
 const state: TodoState = {
   id: '',
@@ -15,4 +16,4 @@ const state: TodoState = {
   project: {},
   stage: 1,
 }
-export const todo: Module<TodoState, RootState> = { namespaced: true, state, actions }
+export const todo: Module<TodoState, RootState> = { namespaced: true, state, actions, mutations }

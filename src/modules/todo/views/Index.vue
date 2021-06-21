@@ -2,9 +2,10 @@
 import { defineComponent, ref } from "vue";
 import { mapState } from "vuex";
 import CreateNewProject from "../components/CreateNewProject.vue";
+import TodoList from "../components/TodoList.vue";
 
 export default defineComponent({
-  components: { CreateNewProject },
+  components: { CreateNewProject, TodoList },
   setup() {
     const isSelectProjectModalOpen = ref(false);
     const newTodoName = ref("");
@@ -21,7 +22,7 @@ export default defineComponent({
   },
 
   computed: {
-    ...mapState(["user", "vault", "project"]),
+    ...mapState(["user", "vault", "project", "todo"]),
   },
 });
 </script>
@@ -54,12 +55,15 @@ export default defineComponent({
         placeholder="Tugas baru"
       />
     </div>
-    <create-new-project
-      @close-modal="isSelectProjectModalOpen = false"
-      v-if="isSelectProjectModalOpen"
-      :newTodoName="newTodoName"
-      :vault="vault"
-      :projects="project.projects"
-    />
+    <div class="mb-8">
+      <create-new-project
+        @close-modal="isSelectProjectModalOpen = false"
+        v-if="isSelectProjectModalOpen"
+        :newTodoName="newTodoName"
+        :vault="vault"
+        :projects="project.projects"
+      />
+    </div>
+    <todo-list v-for="todo in todo.todos" :key="todo.id" :todo="todo" />
   </div>
 </template>
